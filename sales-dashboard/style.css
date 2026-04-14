@@ -1,6 +1,0 @@
-
-/* Add to style.css */
-#salesChart { max-width: 800px; margin: 20px auto; }
-.filters { display: flex; gap: 10px; margin: 20px 0; }
-table { width: 100%; border-collapse: collapse; }
-th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
