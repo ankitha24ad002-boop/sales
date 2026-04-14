@@ -1,1 +1,58 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logosec">
+            <div class="logo">Sales Dashboard</div>
+            <img src="menu-icon.png" class="icn menuicn" id="menuicn" alt="menu">
+        </div>
+        <div class="searchbar">
+            <input type="text" id="searchInput" placeholder="Search products...">
+            <div class="searchbtn"><img src="search-icon.png" class="icn" alt="search"></div>
+        </div>
+    </header>
+    <div class="main-container">
+        <div class="navcontainer" id="nav">
+            <!-- Sidebar nav options: Dashboard, Reports, etc. -->
+        </div>
+        <div class="main">
+            <!-- Metrics cards -->
+            <div class="box-container">
+                <div class="box box1">
+                    <div class="text">
+                        <h2 id="totalRevenue">$0</h2>
+                        <h2>Total Revenue</h2>
+                    </div>
+                </div>
+                <div class="box box2">
+                    <div class="text">
+                        <h2 id="totalOrders">0</h2>
+                        <h2>Total Orders</h2>
+                    </div>
+                </div>
+                <!-- Add more: Avg Order Value, Top Region -->
+            </div>
+            <!-- Filters -->
+            <div class="filters">
+                <select id="regionFilter"><option>All Regions</option></select>
+                <button onclick="updateDashboard()">Filter</button>
+            </div>
+            <!-- Chart -->
+            <canvas id="salesChart" width="400" height="200"></canvas>
+            <!-- Data table -->
+            <table id="salesTable">
+                <thead><tr><th>Region</th><th>Product</th><th>TotalPrice</th></tr></thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
